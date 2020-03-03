@@ -6,8 +6,12 @@ const router = Router()
 // /api/item
 router
   .route('/')
-  .get(controllers.getOne)
+  .get(controllers.getMany)
   .post(controllers.createOne)
+// router
+//   .route('/')
+//   .get()
+//   .post()
 
 // /api/item/:id
 router
@@ -15,5 +19,10 @@ router
   .get(controllers.getOne)
   .put(controllers.updateOne)
   .delete(controllers.removeOne)
+// router
+//   .route('/:id')
+//   .get()
+//   .put()
+//   .delete()
 
 export default router
