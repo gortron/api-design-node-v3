@@ -18,6 +18,7 @@ const listSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
+// Compound index on the field for user and the field for name, and the combination of thw two must be unique (therefor, users cannot have multiple lists of the same name)
 listSchema.index({ user: 1, name: 1 }, { unique: true })
 
 export const List = mongoose.model('list', listSchema)
